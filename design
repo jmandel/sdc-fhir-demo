@@ -6,9 +6,10 @@ Bind
  [x] Each directive defines a template creating rendering + controllers as needed.
 
 
-Add extensions to indicate cardinalities
-Add extensiosn to indicate expected field type + validation method
-Add support for valuset-based picklists (start with FHIR client to resolve references -- e.g. with contained vs. fetched valuesets).
+[x] Add extensions to indicate cardinalities
+[x] Add extensiosn to indicate expected field type + validation method
+[x] Add support for valuset-based picklists (start with FHIR client to resolve references -- e.g. with contained vs. fetched valuesets).
+
 Build a tying-together routine that produces FHIR resource outputs
 Build a cheap python or JS converter from SDC templating language --> FHIR questionnaire. JS has some strong advantages in-browser...
 Add support for repeated and/or multiple select elements

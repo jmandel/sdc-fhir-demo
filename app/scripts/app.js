@@ -8,12 +8,12 @@ angular.module('sdcApp', [
 ])
 .config(function ($routeProvider) {
   $routeProvider
-  .when('/', {
+  .when('/view/:questionnaire', {
     templateUrl: 'views/main.html',
     controller: 'MainCtrl'
   })
   .otherwise({
-    redirectTo: '/'
+    redirectTo: '/view/example'
   });
 });
 
@@ -40,6 +40,7 @@ angular.module('sdcApp').directive('group', function($compile, $timeout){
         compiledContents(scope, function(clone, scope) {
           iElement.append(clone); 
         });
+        scope.top =  (iAttr.top !== undefined);
       };
     }
   };

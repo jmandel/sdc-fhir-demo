@@ -1,0 +1,470 @@
+{
+  "status": "published", 
+  "group": {
+    "header": "Healthcare Event Reporting Form (HERF) Hospital Version\n            1.2", 
+    "group": [
+      {
+        "question": [
+          {
+            "text": "Event ID:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Initial Report Date:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "date"
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "question": [
+          {
+            "text": "Report Date:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "date"
+              }
+            ]
+          }, 
+          {
+            "text": "What is being reported?", 
+            "options": {
+              "reference": "#vs-1"
+            }, 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Briefly describe the event that occurred or unsafe condition:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Briefly describe the location where the event occurred or where the unsafe\n                  condition exists:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Which of the following categories are associated with the event or unsafe\n                  condition?", 
+            "options": {
+              "reference": "#vs-2"
+            }, 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": true
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "question": [
+          {
+            "text": "Event Discovery Date:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Event Discovery Time:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "question": [
+          {
+            "text": "Patient's Name:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Patient's Date of Birth:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "date"
+              }
+            ]
+          }, 
+          {
+            "text": "Patient's Medical Record #:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Patients' Gender:", 
+            "options": {
+              "reference": "#vs-3"
+            }, 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "question": [
+          {
+            "text": "Is this event a perinatal incident that affected a neonate?", 
+            "options": {
+              "reference": "#vs-4"
+            }, 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Neonate's Name:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Neonate's Date of Birth:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "date"
+              }
+            ]
+          }, 
+          {
+            "text": "Neonate's Medical Record #:", 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }, 
+          {
+            "text": "Neonate's Gender:", 
+            "options": {
+              "reference": "#vs-5"
+            }, 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "question": [
+          {
+            "text": "Anonymous Reporter", 
+            "options": {
+              "reference": "#vs-6"
+            }, 
+            "extension": [
+              {
+                "url": "http://sdc/multipleCardinality", 
+                "valueBoolean": false
+              }, 
+              {
+                "url": "http://sdc/answerType", 
+                "valueString": "string"
+              }
+            ]
+          }
+        ]
+      }, 
+      {
+        "header": "OMB No. 0935-0143 Exp. Date 10/31/2014 Public reporting burden for the collection\n               of information is estimated to average 10 minutes per response. An agency may not\n               conduct or sponsor, and a person is not required to respond to, a collection of\n               information unless it displays a currently valid OMB control number. Send comments\n               regarding this burden estimate or any other aspect of this collection of information,\n               including suggestions for reducing this burden, to: AHRQ Reports Clearance Officer,\n               Attention: PRA, Paperwork Reduction Project (0935-0143), AHRQ, 540 Gaither Road, Room\n               #5036, Rockville, MD 20850.", 
+        "question": []
+      }, 
+      {
+        "header": "AHRQ Common Formats - Hospital Version 1.2 - 2012 Medication or Other\n               Substance", 
+        "question": []
+      }
+    ]
+  }, 
+  "resourceType": "Questionnaire", 
+  "text": {
+    "status": "generated"
+  }, 
+  "contained": [
+    {
+      "resourceType": "ValueSet", 
+      "status": "draft", 
+      "_id": "vs-1", 
+      "name": "vs-1", 
+      "expansion": {
+        "timestamp": "2014-04-23T11:00:00", 
+        "contains": [
+          {
+            "code": "A3", 
+            "display": "Incident:"
+          }, 
+          {
+            "code": "A6", 
+            "display": "Near Miss:"
+          }, 
+          {
+            "code": "A9", 
+            "display": "Unsafe Condition:"
+          }
+        ]
+      }
+    }, 
+    {
+      "resourceType": "ValueSet", 
+      "status": "draft", 
+      "_id": "vs-2", 
+      "name": "vs-2", 
+      "expansion": {
+        "timestamp": "2014-04-23T11:00:00", 
+        "contains": [
+          {
+            "code": "A42", 
+            "display": "Blood or Blood Product"
+          }, 
+          {
+            "code": "A44", 
+            "display": "Device or Medical/Surgical Supply, including Health Information\n                        Technology (HIT)"
+          }, 
+          {
+            "code": "A48", 
+            "display": "Fall"
+          }, 
+          {
+            "code": "A51", 
+            "display": "Healthcare-associated Infection"
+          }, 
+          {
+            "code": "A54", 
+            "display": "Medication or Other Substance"
+          }, 
+          {
+            "code": "A57", 
+            "display": "Perinatal"
+          }, 
+          {
+            "code": "A60", 
+            "display": "Pressure Ulcer"
+          }, 
+          {
+            "code": "A63", 
+            "display": "Surgery or Anesthesia (includes invasive procedure)"
+          }, 
+          {
+            "code": "A64", 
+            "display": "Venous Thromboembolism"
+          }, 
+          {
+            "code": "A66", 
+            "display": "Other: PLEASE SPECIFY"
+          }
+        ]
+      }
+    }, 
+    {
+      "resourceType": "ValueSet", 
+      "status": "draft", 
+      "_id": "vs-3", 
+      "name": "vs-3", 
+      "expansion": {
+        "timestamp": "2014-04-23T11:00:00", 
+        "contains": [
+          {
+            "code": "M", 
+            "display": "Male"
+          }, 
+          {
+            "code": "F", 
+            "display": "Female"
+          }, 
+          {
+            "code": "UNK", 
+            "display": "Unknown"
+          }
+        ]
+      }
+    }, 
+    {
+      "resourceType": "ValueSet", 
+      "status": "draft", 
+      "_id": "vs-4", 
+      "name": "vs-4", 
+      "expansion": {
+        "timestamp": "2014-04-23T11:00:00", 
+        "contains": [
+          {
+            "code": "A15", 
+            "display": "Yes"
+          }, 
+          {
+            "code": "A18", 
+            "display": "No"
+          }
+        ]
+      }
+    }, 
+    {
+      "resourceType": "ValueSet", 
+      "status": "draft", 
+      "_id": "vs-5", 
+      "name": "vs-5", 
+      "expansion": {
+        "timestamp": "2014-04-23T11:00:00", 
+        "contains": [
+          {
+            "code": "M", 
+            "display": "Male"
+          }, 
+          {
+            "code": "F", 
+            "display": "Female"
+          }, 
+          {
+            "code": "UNK", 
+            "display": "Unknown"
+          }
+        ]
+      }
+    }, 
+    {
+      "resourceType": "ValueSet", 
+      "status": "draft", 
+      "_id": "vs-6", 
+      "name": "vs-6", 
+      "expansion": {
+        "timestamp": "2014-04-23T11:00:00", 
+        "contains": [
+          {
+            "code": "A15", 
+            "display": "Yes"
+          }, 
+          {
+            "code": "A18", 
+            "display": "No"
+          }
+        ]
+      }
+    }
+  ], 
+  "authored": "2013-02-19T14:15:00"
+}

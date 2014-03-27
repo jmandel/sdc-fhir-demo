@@ -1,5 +1,17 @@
-.q {}
-.g {padding-left: 2em;  border: 1px solid lightgrey; border-radius:10px; padding-right: 2em; margin-bottom: 1em;}
+.qtitle {
+  margin-top: 0px;
+}
+
+.g {
+padding-left: 2em;
+border: 1px solid lightgrey;
+border-radius:10px;
+padding-right: 1em;
+padding-top:.2em;
+padding-bottom:.2em;
+margin-bottom: 1em;
+background-color: rgba(0, 100, 255, 0.03);
+}
 
 /* Space out content a bit */
 body {
@@ -34,12 +46,6 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
 .container-narrow > hr {
   margin: 30px 0;
 }

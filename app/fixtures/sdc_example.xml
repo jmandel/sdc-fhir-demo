@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdc:form_package xmlns="http://www.iso.org/19763/13/2013" xmlns:sdc="http://nlm.nih.gov/sdc/form" xmlns:mfi13="http://www.iso.org/19763/13/2013" xmlns:mdr3="http://www.iso.org/11179/3/2013" xmlns:mfi10="http://www.iso.org/19763/10/2013" xmlns:mfi6="http://www.iso.org/19763/6/2013" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:fhir="http://www.hl7.org/implement/standards/fhir/datatypes.htm" xmlns:dex="urn:ihe:qrph:dex:2013" xmlns:xs="http://www.w3.org/2001/XMLSchema" identifier="http://nci.nih.gov/xml/owl/cadsr#form_package/99999/1.0">
+   <!-- Check for RDF profile to determine what parameter is needed to call for a form. Is a uri adequate? 
+      Tag for the payload element that may replace form_package -->
+   <!-- Version 2 replaced namespace with IHE provided DEX namespace -->
+   <!-- Version 3 Updated to conform to most recent SDCForm.xsd -->
+  
+   <sdc:mapping_package xmlns="http://nlm.nih.gov/sdc/form" mapping_package_uri="http://nci.nih.gov/xml/owl/cadsr#mapping_package/8888/1.0" form_uri="http://AHRQ.org/form_identifier/HERF/1.2">
+      <mdr_mapping>
+         <question_element_data_element_association>
+            <mfi13:question_element_identifier>http://AHRQ.org/form/question_identifier/HERF/1.2/DE3</mfi13:question_element_identifier>
+            <mfi13:association_type>sameAs</mfi13:association_type>
+            <mfi13:data_element_identifier>2.16.840.1.113883.3.263.1.12</mfi13:data_element_identifier>
+             </question_element_data_element_association>
+         <question_element_data_element_association>
+            <mfi13:question_element_identifier>http://AHRQ.org/form/question_identifier/HERF/1.2/DE9</mfi13:question_element_identifier>
+            <mfi13:association_type>related</mfi13:association_type>
+            <mfi13:data_element_identifier>2.16.840.1.113883.5.1008</mfi13:data_element_identifier>
+            </question_element_data_element_association>
+         <question_element_data_element_association>
+            <mfi13:question_element_identifier>http://AHRQ.org/form/question_identifier/HERF/1.2/DE321</mfi13:question_element_identifier>
+            <mfi13:association_type>related</mfi13:association_type>
+            <mfi13:data_element_identifier>2.16.840.1.113883.3.263.1.12</mfi13:data_element_identifier>
+         </question_element_data_element_association>
+         <question_element_data_element_association>
+            <mfi13:question_element_identifier>http://AHRQ.org/form/question_identifier/HERF/1.2/DE03</mfi13:question_element_identifier>
+            <mfi13:association_type>related</mfi13:association_type>
+            <mfi13:data_element_identifier>2.16.840.1.113883.3.263.1.12</mfi13:data_element_identifier>
+         </question_element_data_element_association>
+         <question_element_data_element_association>
+            <mfi13:question_element_identifier>http://AHRQ.org/form/question_identifier/HERF/1.2/DE42</mfi13:question_element_identifier>
+            <mfi13:association_type>related</mfi13:association_type>
+            <mfi13:data_element_identifier>2.16.840.1.113883.5.1 or
+               2.16.840.1.113883.5.1008</mfi13:data_element_identifier>
+               <sdc:dex_mapping_specification>
+                  <dex:contentModel>
+                     <dex:id>2.16.840.1.113883.10.20.1</dex:id>
+                     <dex:name>HL7 CCD</dex:name>
+                  </dex:contentModel>
+                  <dex:type>XPATH</dex:type>
+                  <dex:mappingScript>/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code</dex:mappingScript>
+               </sdc:dex_mapping_specification>
+         </question_element_data_element_association>
+         <question_element_data_element_association>
+            <mfi13:question_element_identifier>http://AHRQ.org/form/question_identifier/HERF/1.2/DE43</mfi13:question_element_identifier>
+            <mfi13:association_type>related</mfi13:association_type>
+            <mfi13:data_element_identifier>2.16.840.1.113883.5.1 or
+               2.16.840.1.113883.5.1008</mfi13:data_element_identifier>
+         </question_element_data_element_association>
+         <question_element_data_element_association>
+            <mfi13:question_element_identifier>http://AHRQ.org/form/question_identifier/HERF/1.2/DE33</mfi13:question_element_identifier>
+            <mfi13:association_type>related</mfi13:association_type>
+            <mfi13:data_element_identifier>2.16.840.1.113883.3.263.1.12</mfi13:data_element_identifier>
+         </question_element_data_element_association>
+         <!--  element mappings abbreviated... -->
+      </mdr_mapping>
+   </sdc:mapping_package>
+      
+
+   <sdc:administrative_package>
+      <submission_rule rule_id_and_version="1v1" form_identifier="http://AHRQ.org/form_identifier/HERF/1.2" xmlns="http://nlm.nih.gov/sdc/form">
+         <destination>
+            <sdc:description>This is intended to be a set of one or more submission rules that
+               pertain to this version of the form. e.g. "This is an FDA form and it must be sent to
+               FDA when completed</sdc:description>
+         </destination>
+      </submission_rule>
+      <sdc:compliance_rule/>
+      <originating_registry_summary xmlns="http://nlm.nih.gov/sdc/form">
+         <!-- This element is an ISO element describing where this particular instance of the form came from -->
+         <mfi6:registry_organization>
+            <mdr3:name>NLM Forms Registry</mdr3:name>
+            <mdr3:uri>NLMRegistrationAuthorityIdentifier</mdr3:uri>
+         </mfi6:registry_organization>
+         <mfi6:reference_standard_identifier>ISO/IEC 19763-13</mfi6:reference_standard_identifier>
+         <mfi6:purpose_for_registry>
+            <mdr3:title>Forms for Meaningful Use</mdr3:title>
+         </mfi6:purpose_for_registry>
+         <mfi6:manual_for_registry>
+            <mdr3:title>SDC Forms IG</mdr3:title>
+         </mfi6:manual_for_registry>
+      </originating_registry_summary>
+      <sdc:form_language>
+         <style_language>
+            <!-- Optional, single reference document describing the
+                                style language used to place Form_Design_Element instances in place
+                                on the form
+                                e.g.: http://www.w3.org/TR/CSS3/ 
+         SDC could consider providing a default style sheet? -->
+            <mdr3:identifier>http://www.w3.org/TR/CSS3/</mdr3:identifier>
+            <mdr3:document_type>
+               <mdr3:description>a description of the style language used in the form
+                  design</mdr3:description>
+            </mdr3:document_type>
+         </style_language>
+         <logic_language>
+            <!-- one logic language for all SDC forms should be established -->
+            <mdr3:identifier>http://some.document.describing.the.logicLangauge.document</mdr3:identifier>
+            <mdr3:document_type>
+               <mdr3:description>a description of the logic document</mdr3:description>
+            </mdr3:document_type>
+         </logic_language>
+         <format_language>
+            <!-- SDC may want to determine whether one or more formatting languages will be supported.
+            Forms group is leaning towards html4, but the SDC group needs to dsicuss which will be supported in SDC -->
+            <mdr3:identifier>http://regEx</mdr3:identifier>
+            <mdr3:document_type>
+               <mdr3:description>a description of the format document</mdr3:description>
+            </mdr3:document_type>
+         </format_language>
+         <textual_language>eng</textual_language>
+         <!-- The language used in the description of this form 
+       is consistent with meaningful and is based on LANGUAGE CODE 639-2 (3 digit) -->
+      </sdc:form_language>
+      <sdc:contacts>
+         <contact xmlns="http://nlm.nih.gov/sdc/form">
+            <!-- SDC Template Contact: optional one or more, complex element allowing for different roles  [ Steward, Owning Authority, etc ] -->
+            <individual>
+               <mdr3:name>Amy Helwig</mdr3:name>
+               <mdr3:title>Ms.</mdr3:title>
+               <mdr3:email_address/>
+            </individual>
+            <organization>
+               <name>Agency for Healthcare Research and Quality (AHRQ)</name>
+               <fhir_mail_address>
+                  <use/>
+                  <text/>
+                  <line/>
+                  <line/>
+                  <city/>
+                  <state/>
+                  <zip/>
+                  <country/>
+               </fhir_mail_address>
+            </organization>
+            <role>
+               <mdr3:title>Creator</mdr3:title>
+            </role>
+         </contact>
+         
+         <contact xmlns="http://nlm.nih.gov/sdc/form">
+            <!-- SDC Template Contact: optional one or more, complex element allowing for different roles  [ Steward, Owning Authority, etc ] -->
+            <individual>
+               <mdr3:name>Susan Terrillion</mdr3:name>
+               <mdr3:title>Ms.</mdr3:title>
+               <mdr3:email_address/>
+            </individual>
+            <organization>
+               <name>Agency for Healthcare Research and Quality (AHRQ)</name>
+               <fhir_mail_address>
+                  <use/>
+                  <text/>
+                  <line/>
+                  <line/>
+                  <city>Bethesda</city>
+                  <state>MD</state>
+                  <zip/>
+                  <country>USA</country>
+               </fhir_mail_address>
+            </organization>
+            <role>
+               <mdr3:title>Data Steward</mdr3:title>
+            </role>
+         </contact>
+      </sdc:contacts>
+      <registration xmlns="http://nlm.nih.gov/sdc/form">
+         <!-- if this is not inside the form, then we need an element to point to the form it applies to -->
+         <stewardship_record>
+            <organization>
+               <name>Agency for Healthcare Research and Quality (AHRQ)</name>
+               <fhir_mail_address>
+                  <use/>
+                  <text/>
+                  <line/>
+                  <line/>
+                  <city/>
+                  <state/>
+                  <zip/>
+                  <country/>
+               </fhir_mail_address>
+            </organization>
+         </stewardship_record>
+         <creation_date/>
+         <state>
+            <mdr3:registration_status/>
+            <mdr3:effective_date/>
+            <mdr3:until_date/>
+            <mdr3:administrative_note/>
+            <mdr3:administrative_status/>
+         </state>
+         <submission_record>
+            <organization>
+               <name>Agency for Healthcare Research and Quality (AHRQ)</name>
+               <fhir_mail_address>
+                  <use/>
+                  <text/>
+                  <line/>
+                  <line/>
+                  <city/>
+                  <state/>
+                  <zip/>
+                  <country/>
+               </fhir_mail_address>
+            </organization>
+            <contact>
+               <organization>
+                  <name>CAP</name>
+                  <fhir_mail_address>
+                     <use/>
+                     <text/>
+                     <line/>
+                     <line/>
+                     <city/>
+                     <state/>
+                     <zip/>
+                     <country/>
+                  </fhir_mail_address>
+                  <phone_number>800-323-4040</phone_number>
+               </organization>
+               <role>
+                  <mdr3:title>author</mdr3:title>
+               </role>
+            </contact>
+         </submission_record>
+         <registration_status_date/>
+      </registration>
+   </sdc:administrative_package>
+   
+   <stylesheet xmlns="http://nlm.nih.gov/sdc/form"/>
+   <!-- the language used in the stylesheet is defined by the form_langauage/style_language -->
+   
+
+   <form_design uri="http://AHRQ.org#identifier/HERF/1.2" xmlns="http://nlm.nih.gov/sdc/form">
+      <designation>
+         <context>http://AHRQ.org</context>
+         <sign acceptability="preferred">Healthcare Event Reporting Form (HERF) Hospital Version
+            1.2</sign>
+      </designation>
+      <security_and_privacy/>
+      <header initial_state="enabled">
+         <sdc:section_order>1</sdc:section_order>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <minimum>1</minimum>
+               <maximum>1</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Event ID:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <datatype xmlns="http://nlm.nih.gov/sdc/form">
+                  <string>
+                     <minimum_characters>3</minimum_characters>
+                     <maximum_characters>9</maximum_characters>
+                  </string>
+               </datatype>
+            </sdc:text_field>
+            <sdc:question_order>1</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE2</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <maximum>1</maximum>
+               <minimum>1</minimum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Initial Report Date:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string_date>
+                     <sdc:pattern>MM/DD/YYYY</sdc:pattern>
+                  </sdc:string_date>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>2</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE30</sdc:identifier>
+         </sdc:question>
+         <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/header</sdc:identifier>
+      </header>
+      <sdc:section initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+         <sdc:section_order>2</sdc:section_order>
+         <sdc:question initial_state="enabled">
+            <cardinality>
+               <maximum>1</maximum>
+               <minimum>1</minimum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Report Date:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>1.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string_date>
+                     <sdc:pattern>MM/DD/YYYY</sdc:pattern>
+                  </sdc:string_date>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:text_after_question>
+               <label>MM DD YYYY</label>
+               <style/>
+            </sdc:text_after_question>
+            <sdc:question_order>1</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE30</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <maximum>1</maximum>
+               <minimum>1</minimum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>What is being reported?</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>2.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:additional_instruction>
+               <label>CHECK ONE:</label>
+               <style/>
+            </sdc:additional_instruction>
+            <sdc:list_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string/>
+               </sdc:datatype>
+               <sdc:ordered>true</sdc:ordered>
+               <sdc:list_item>
+                  <value>A3</value>
+                  <!-- This is the data value that is stored in the database if this item is selected -->
+                  <item_number>
+                     <label>a.</label>
+                     <style/>
+                  </item_number>
+                  <!-- An optional item number displayed -->
+                  <item_prompt>
+                     <label>Incident:</label>
+                     <style/>
+                  </item_prompt>
+                  <!-- This is the item prompt for the person filling out the form -->
+                  <value_meaning>
+                     <label>A patient safety event that reached the patient, whether or not the
+                        patient was harmed.</label>
+                     <style/>
+                  </value_meaning>
+                  <!-- This is the meaning of the list item  -->
+                  <guard>
+                     <value>show</value>
+                     <guarded_element_identifier>http://AHRQ.org/form/section_identifier#HERF/SEC03</guarded_element_identifier>
+                  </guard>
+                  <sdc:list_item_order>1</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE3/A3</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A6</value>
+                  <item_number>
+                     <label>b.</label>
+                  </item_number>
+                  <item_prompt>
+                     <label>Near Miss:</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning>
+                     <label>A patient safety event that did not reach the patient.</label>
+                     <style/>
+                  </value_meaning>
+                  <guard>
+                     <value>show</value>
+                     <guarded_element_identifier>http://AHRQ.org/form/section_identifier#HERF/SEC03</guarded_element_identifier>
+                  </guard>
+                  <sdc:list_item_order>2</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE3/A6</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A9</value>
+                  <item_number>
+                     <label>c.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Unsafe Condition:</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning>
+                     <label>Any circumstance that increases the probability of a patient safety
+                        event.</label>
+                  </value_meaning>
+                  <guard>
+                     <value>show</value>
+                     <guarded_element_identifier>http://AHRQ.org/form/question_identifier#HERF/DE15</guarded_element_identifier>
+                  </guard>
+                  <sdc:list_item_order>3</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE3/A9</sdc:list_item_identifier>
+               </sdc:list_item>
+            </sdc:list_field>
+            <sdc:question_order>2</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE3</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <maximum>0</maximum>
+               <minimum>1</minimum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Briefly describe the event that occurred or unsafe condition:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>5.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string/>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>4</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE15</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <maximum>0</maximum>
+               <minimum>1</minimum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Briefly describe the location where the event occurred or where the unsafe
+                  condition exists:</label>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>6.</label>
+            </sdc:question_number>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string/>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>4</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE18</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <minimum>1</minimum>
+               <maximum>10</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Which of the following categories are associated with the event or unsafe
+                  condition?</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>7.</label>
+            </sdc:question_number>
+            <sdc:additional_instruction>
+               <label>CHECK ALL THAT APPLY:</label>
+            </sdc:additional_instruction>
+            <sdc:additional_instruction>
+               <label>FOR EACH CATEGORY SELECTED BELOW, EXCEPT “OTHER”, PLEASE COMPLETE THE
+                  CORRESPONDING CATEGORY-SPECIFIC FORM. ALL CATEGORIES INCLUDE REPORTING OF
+                  INCIDENTS. ANY CATEGORY WITH + ALSO INCLUDES REPORTING OF NEAR MISSES. ANY
+                  CATEGORY WITH * ALSO INCLUDES REPORTING OF UNSAFE CONDITIONS.</label>
+            </sdc:additional_instruction>
+            <sdc:additional_instruction initial_state="disabled">
+               <label>For Incidents, use all of the answers. For Near Miss, use only answers: a, b,
+                  e, h, j. For Unsafe Conditions, use only answers: a, b, e, j.</label>
+            </sdc:additional_instruction>
+            <sdc:list_field>
+               <multiselect>true</multiselect>
+               <sdc:datatype>
+                  <sdc:integer/>
+               </sdc:datatype>
+               <sdc:list_item>
+                  <value>A42</value>
+                  <item_number>
+                     <label>a.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Blood or Blood Product</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>1</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A42</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A44</value>
+                  <item_number>
+                     <label>b.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Device or Medical/Surgical Supply, including Health Information
+                        Technology (HIT)</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>2</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A44</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A48</value>
+                  <item_number>
+                     <label>c.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Fall</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>3</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A48</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A51</value>
+                  <item_number>
+                     <label>d.</label>
+                  </item_number>
+                  <item_prompt>
+                     <label>Healthcare-associated Infection</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>4</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A51</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A54</value>
+                  <item_number>
+                     <label>e.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Medication or Other Substance</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>5</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A54</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A57</value>
+                  <item_number>
+                     <label>f.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Perinatal</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>6</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A57</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A60</value>
+                  <item_number>
+                     <label>g.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Pressure Ulcer</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>7</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A460</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A63</value>
+                  <item_number>
+                     <label>h.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Surgery or Anesthesia (includes invasive procedure)</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>8</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A63</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A64</value>
+                  <item_number>
+                     <label>i.</label>
+                  </item_number>
+                  <item_prompt>
+                     <label>Venous Thromboembolism</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>9</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A64</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A66</value>
+                  <item_number>
+                     <label>j.</label>
+                  </item_number>
+                  <item_prompt>
+                     <label>Other: PLEASE SPECIFY</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <fill_in>true</fill_in>
+                  <sdc:list_item_order>10</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE21/A66</sdc:list_item_identifier>
+               </sdc:list_item>
+            </sdc:list_field>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE21</sdc:identifier>
+         </sdc:question>
+         <sdc:identifier>http://AHRQ.org/form/section_identifier#HERF/SE01</sdc:identifier>
+      </sdc:section>
+      <sdc:section initial_state="disabled">
+         <sdc:section_order>3</sdc:section_order>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <maximum>1</maximum>
+               <minimum>1</minimum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Event Discovery Date:</label>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>3.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string>
+                     <sdc:pattern>MM/DD/YYYY</sdc:pattern>
+                  </sdc:string>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>3</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE9a</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <maximum>1</maximum>
+               <minimum>1</minimum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Event Discovery Time:</label>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>4.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <next_relevant_element>http://AHRQ.org/form/question_identifier#HERF/DE15</next_relevant_element>
+               <sdc:default_element>
+                  <sdc:default>
+                     <sdc:value>UNK</sdc:value>
+                     <sdc:default_prompt>
+                        <label>Unknown</label>
+                     </sdc:default_prompt>
+                  </sdc:default>
+                  <sdc:read_only>false</sdc:read_only>
+               </sdc:default_element>
+               <sdc:datatype>
+                  <sdc:string>
+                     <sdc:pattern>HHMM</sdc:pattern>
+                  </sdc:string>
+               </sdc:datatype>
+                </sdc:text_field>
+            <sdc:text_after_question>
+               <label>(MILITARY TIME)</label>
+            </sdc:text_after_question>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE9b</sdc:identifier>
+         </sdc:question>
+         <sdc:identifier>http://AHRQ.org/form/section_identifier#HERF/SEC03</sdc:identifier>
+      </sdc:section>
+      <sdc:section initial_state="disabled" xmlns="http://www.iso.org/19763/13/2013">
+         <rule>
+            <expression>Valid only if the response to Question 2 response was Incident.</expression>
+         </rule>
+         <sdc:section_title>
+            <label>Patient Information  (COMPLETE ONLY IF INCIDENT):</label>
+            <style/>
+         </sdc:section_title>
+         <sdc:section_instruction>
+            <label>Please complete the patient identifiers below. Additional patient information is
+               captured on the Patient Information Form (PIF). (When reporting a perinatal incident
+               that affected a mother and a neonate, please complete the patient identifiers below
+               for the mother (Q8 – Q11) and the neonate (Q12 – Q15). Please also complete a
+               separate PIF for the neonate involved.)</label>
+            <style/>
+         </sdc:section_instruction>
+         <sdc:section_order>4</sdc:section_order>
+         <sdc:question initial_state="enabled">
+            <cardinality>
+               <minimum>1</minimum>
+               <maximum>1</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Patient's Name:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>8.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:question_instruction>
+               <label>FIRST, MIDDLE, LAST</label>
+               <style/>
+            </sdc:question_instruction>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string/>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>7</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE46</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled">
+            <cardinality>
+               <minimum>0</minimum>
+               <maximum>1</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Patient's Date of Birth:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>9.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:additional_instruction>
+               <label>MM/DD/YYYY</label>
+               <style/>
+            </sdc:additional_instruction>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string_date>
+                     <sdc:pattern>MM/DD/YYYY</sdc:pattern>
+                  </sdc:string_date>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>8</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE47</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled">
+            <cardinality>
+               <minimum>1</minimum>
+               <maximum>1</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Patient's Medical Record #:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>10.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string/>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>9</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE49</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled">
+            <sdc:question_prompt>
+               <label>Patients' Gender:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>11.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:additional_instruction>
+               <label>CHECK ONE:</label>
+               <style/>
+            </sdc:additional_instruction>
+            <!-- this is on the spreadsheet but not the paper form -->
+            <sdc:list_field>
+               <multiselect>false</multiselect>
+               <sdc:ordered>true</sdc:ordered>
+               <sdc:list_item>
+                  <value>M</value>
+                  <item_number>
+                     <label>a.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Male</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>1</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE42/M</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>F</value>
+                  <item_number>
+                     <label>b.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Female</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>2</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE42/F</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>UNK</value>
+                  <item_number>
+                     <label>c.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Unknown</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>3</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE42/UNK</sdc:list_item_identifier>
+               </sdc:list_item>
+            </sdc:list_field>
+            <sdc:question_order>10</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE42</sdc:identifier>
+         </sdc:question>
+         <sdc:identifier>http://AHRQ.org/form/section_identifier#HERF/SEC04</sdc:identifier>
+      </sdc:section>
+      <sdc:section initial_state="disabled" xmlns="http://www.iso.org/19763/13/2013">
+         <rule>
+            <expression>COMPLETE ONLY FOR NEONATE AFFECTED BY PERINATAL INCIDENT</expression>
+         </rule>
+         <sdc:section_title xmlns="http://www.iso.org/19763/13/2013">
+            <label>Neonatal Patient Information:</label>
+            <style/>
+         </sdc:section_title>
+         <sdc:section_order>5</sdc:section_order>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <!-- Not on paper form -->
+            <sdc:question_prompt>
+               <label>Is this event a perinatal incident that affected a neonate?</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:additional_instruction>
+               <label>CHECK ONE:</label>
+               <style/>
+            </sdc:additional_instruction>
+            <sdc:list_field>
+               <multiselect>false</multiselect>
+               <sdc:ordered>true</sdc:ordered>
+               <sdc:list_item>
+                  <value>A15</value>
+                  <item_number>
+                     <label>a.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Yes</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <guard>
+                     <value>show</value>
+                     <guarded_element_identifier>http://AHRQ.org/form/question_identifier#HERF/DE34</guarded_element_identifier>
+                  </guard>
+                  <sdc:list_item_order>1</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE34/A15</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A18</value>
+                  <item_number>
+                     <label>b.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>No</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <guard>
+                     <value>show</value>
+                     <guarded_element_identifier>http://AHRQ.org/form/question_identifier#HERF/DE33</guarded_element_identifier>
+                  </guard>
+                  <sdc:list_item_order>2</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE34/A18</sdc:list_item_identifier>
+               </sdc:list_item>
+            </sdc:list_field>
+            <sdc:question_order>11</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/Hidden</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <sdc:question_prompt>
+               <label>Neonate's Name:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>12.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:additional_instruction>
+               <label>FIRST, MIDDLE, LAST</label>
+               <style/>
+            </sdc:additional_instruction>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string/>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>12</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE34</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <minimum>0</minimum>
+               <maximum>1</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Neonate's Date of Birth:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>13.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:additional_instruction>
+               <label>MM/DD/YYYY</label>
+               <style/>
+            </sdc:additional_instruction>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string_date>
+                     <sdc:pattern>MM/DD/YYYY</sdc:pattern>
+                  </sdc:string_date>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>13</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE37</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <minimum>1</minimum>
+               <maximum>1</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Neonate's Medical Record #:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>14.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:text_field>
+               <multiselect>false</multiselect>
+               <sdc:datatype>
+                  <sdc:string/>
+               </sdc:datatype>
+            </sdc:text_field>
+            <sdc:question_order>14</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE40</sdc:identifier>
+         </sdc:question>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <minimum>1</minimum>
+               <maximum>1</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Neonate's Gender:</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>15.</label>
+               <style/>
+            </sdc:question_number>
+            <sdc:additional_instruction>
+               <label>CHECK ONE:</label>
+               <style/>
+            </sdc:additional_instruction>
+            <sdc:list_field>
+               <multiselect>false</multiselect>
+               <sdc:ordered>true</sdc:ordered>
+               <sdc:list_item>
+                  <value>M</value>
+                  <item_number>
+                     <label>a.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Male</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>1</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE43/M</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>F</value>
+                  <item_number>
+                     <label>b.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Female</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>2</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE43/F</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>UNK</value>
+                  <item_number>
+                     <label>c.</label>
+                     <style/>
+                  </item_number>
+                  <item_prompt>
+                     <label>Unknown</label>
+                     <style/>
+                  </item_prompt>
+                  <value_meaning/>
+                  <sdc:list_item_order>3</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE43/UNK</sdc:list_item_identifier>
+               </sdc:list_item>
+            </sdc:list_field>
+            <sdc:question_order>15</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE43</sdc:identifier>
+         </sdc:question>
+         <sdc:identifier>http://AHRQ.org/form/section_identifier#HERF/SEC05</sdc:identifier>
+      </sdc:section>
+      <sdc:section initial_state="enabled">
+         <sdc:section_title xmlns="http://www.iso.org/19763/13/2013">
+            <label>REPORT AND EVENT REPORTER INFORMATION</label>
+            <style/>
+         </sdc:section_title>
+         <sdc:section_order>6</sdc:section_order>
+         <sdc:question initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+            <cardinality>
+               <minimum>0</minimum>
+               <maximum>1</maximum>
+            </cardinality>
+            <sdc:question_prompt>
+               <label>Anonymous Reporter</label>
+               <style/>
+            </sdc:question_prompt>
+            <sdc:question_number>
+               <label>16.</label>
+            </sdc:question_number>
+            <sdc:list_field>
+               <multiselect>false</multiselect>
+               <sdc:list_item>
+                  <value>A15</value>
+                  <item_number>
+                     <label>a.</label>
+                  </item_number>
+                  <item_prompt>
+                     <label>Yes</label>
+                  </item_prompt>
+                  <value_meaning/>
+                  <guard>
+                     <value>show</value>
+                     <guarded_element_identifier>http://AHRQ.org/form/question_identifier#HERF/DONE</guarded_element_identifier>
+                  </guard>
+                  <sdc:list_item_order>1</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE33/A15</sdc:list_item_identifier>
+               </sdc:list_item>
+               <sdc:list_item>
+                  <value>A18</value>
+                  <item_number>
+                     <label>b.</label>
+                  </item_number>
+                  <item_prompt>
+                     <label>No</label>
+                  </item_prompt>
+                     <value_meaning/>
+                  <sdc:guard>
+                     <sdc:value>show</sdc:value>
+                     <sdc:guarded_element>
+                        <sdc:question xmlns="http://www.iso.org/19763/13/2013">
+                           <cardinality>
+                              <minimum>1</minimum>
+                              <maximum>1</maximum>
+                           </cardinality>
+                           <sdc:question_prompt>
+                              <label>Reporter's Name:</label>
+                           </sdc:question_prompt>
+                           <sdc:question_number>
+                              <label>17.</label>
+                           </sdc:question_number>
+                           <sdc:additional_instruction>
+                              <label>FIRST, MIDDLE, LAST</label>
+                           </sdc:additional_instruction>
+                           <sdc:text_field>
+                              <multiselect>false</multiselect>
+                              <sdc:datatype>
+                                 <sdc:string/>
+                              </sdc:datatype>
+                           </sdc:text_field>
+                           <sdc:question_order>17</sdc:question_order>
+                           <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE50</sdc:identifier>
+                        </sdc:question>
+                        <sdc:question initial_state="disabled" xmlns="http://www.iso.org/19763/13/2013">
+                           <cardinality>
+                              <minimum>1</minimum>
+                              <maximum>1</maximum>
+                           </cardinality>
+                           <sdc:question_prompt>
+                              <label>Telephone Number:</label>
+                           </sdc:question_prompt>
+                           <sdc:question_number>
+                              <label>18.</label>
+                           </sdc:question_number>
+                           <sdc:text_field>
+                              <multiselect>false</multiselect>
+                              <sdc:datatype>
+                                 <sdc:integer/>
+                              </sdc:datatype>
+                           </sdc:text_field>
+                           <sdc:question_order>18</sdc:question_order>
+                           <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE52</sdc:identifier>
+                        </sdc:question>
+                        <sdc:question initial_state="disabled" xmlns="http://www.iso.org/19763/13/2013">
+                           <cardinality>
+                              <minimum>1</minimum>
+                              <maximum>1</maximum>
+                           </cardinality>
+                           <sdc:question_prompt>
+                              <label>Email Address:</label>
+                           </sdc:question_prompt>
+                           <sdc:question_number>
+                              <label>19.</label>
+                           </sdc:question_number>
+                           <sdc:text_field>
+                              <multiselect>false</multiselect>
+                              <sdc:datatype>
+                                 <sdc:integer/>
+                              </sdc:datatype>
+                           </sdc:text_field>
+                           <sdc:question_order>19</sdc:question_order>
+                           <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE53</sdc:identifier>
+                        </sdc:question>
+                        <sdc:question initial_state="disabled" xmlns="http://www.iso.org/19763/13/2013">
+                           <sdc:question_prompt>
+                              <label>Reporter's Job or Position:</label>
+                           </sdc:question_prompt>
+                           <sdc:question_number>
+                              <label>20.</label>
+                           </sdc:question_number>
+                           <sdc:text_field>
+                              <multiselect>false</multiselect>
+                              <sdc:datatype>
+                                 <sdc:string/>
+                              </sdc:datatype>
+                           </sdc:text_field>
+                           <sdc:question_order>20</sdc:question_order>
+                           <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE36</sdc:identifier>
+                        </sdc:question>
+                     </sdc:guarded_element>
+                  </sdc:guard>
+                  <sdc:list_item_order>2</sdc:list_item_order>
+                  <sdc:list_item_identifier>http://AHRQ.org/form/list_item_identifier#HERF/DE33/A18</sdc:list_item_identifier>
+               </sdc:list_item>
+            </sdc:list_field>
+            <sdc:question_order>16</sdc:question_order>
+            <sdc:identifier>http://AHRQ.org/form/question_identifier#HERF/DE33</sdc:identifier>
+         </sdc:question>
+         <sdc:identifier>http://AHRQ.org/form/list_item_identifier#HERF/SEC06</sdc:identifier>
+      </sdc:section>
+
+      <sdc:section initial_state="enabled" xmlns="http://www.iso.org/19763/13/2013">
+         <sdc:section_title>
+            <label>Thank you for completing these questions.</label>
+            <style/>
+         </sdc:section_title>
+         <sdc:section_instruction>
+            <label>OMB No. 0935-0143 Exp. Date 10/31/2014 Public reporting burden for the collection
+               of information is estimated to average 10 minutes per response. An agency may not
+               conduct or sponsor, and a person is not required to respond to, a collection of
+               information unless it displays a currently valid OMB control number. Send comments
+               regarding this burden estimate or any other aspect of this collection of information,
+               including suggestions for reducing this burden, to: AHRQ Reports Clearance Officer,
+               Attention: PRA, Paperwork Reduction Project (0935-0143), AHRQ, 540 Gaither Road, Room
+               #5036, Rockville, MD 20850.</label>
+            <style/>
+         </sdc:section_instruction>
+         <sdc:section_order>7</sdc:section_order>
+         <sdc:identifier>http://AHRQ.org/form/section_identifier#HERF/SEC07</sdc:identifier>
+      </sdc:section>
+
+      <footer initial_state="enabled">
+         <sdc:section_instruction xmlns="http://www.iso.org/19763/13/2013">
+            <label>AHRQ Common Formats - Hospital Version 1.2 - 2012 Medication or Other
+               Substance</label>
+         </sdc:section_instruction>
+         <sdc:identifier>http://AHRQ.org/form/section_identifier#HERF/footer</sdc:identifier>
+         
+      </footer>
+   </form_design>
+</sdc:form_package>

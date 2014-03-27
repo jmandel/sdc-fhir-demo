@@ -1,8 +1,29 @@
 <div class="q" ng-controller="QuestionController">
   <form role="form">
     <div class="form-group">
+
       <label>{{question.text}}</label>
-      <input type="text" class="form-control" ng-model="question.responses[0].text"/>
+
+      <select multiple class="form-control" 
+        ng-model="question.responses.choice"
+        ng-if="options && multiple">
+        <option ng-repeat="o in options.expansion.contains" ng-value="o.code">
+        {{o.display}}
+        </option>
+      </select>
+
+      <select class="form-control"
+        ng-model="question.responses.choice"
+        ng-if="options && !multiple" >
+        <option ng-repeat="o in options.expansion.contains" ng-value="o.code">
+        {{o.display}}
+        </option>
+      </select>
+
+      <input type="{{inputType}}" class="form-control"
+      ng-model="question.responses.text[0]"
+      ng-if="!options" />
+
     </div>
   </form>
   <group ng-repeat="group in question.group" />
