@@ -1,8 +1,14 @@
 Use the FHIR questionnaire JSON structure at top-level.
 
 Bind 
+ [x] sub-groups to <group> directives
+ [x] questions to <question> directives
+ [x] Each directive defines a template creating rendering + controllers as needed.
 
- * sub-groups to <group> directives
- * questions to <question> directives
 
-Each directive defines a template creating rendering + controllers as needed.
+Add extensions to indicate cardinalities
+Add extensiosn to indicate expected field type + validation method
+Add support for valuset-based picklists (start with FHIR client to resolve references -- e.g. with contained vs. fetched valuesets).
+Build a tying-together routine that produces FHIR resource outputs
+Build a cheap python or JS converter from SDC templating language --> FHIR questionnaire. JS has some strong advantages in-browser...
+Add support for repeated and/or multiple select elements

@@ -13,94 +13,90 @@
   },
   "group": {
     "name": {
-      "text": "NSW Government My Personal Health Record, january 2013"
+      "coding": [
+        {
+          "code": "6.1"
+        }
+      ],
+      "text": "Birth details"
     },
+    "header": "Birth details - To be completed by health professional",
     "group": [
       {
-        "name": {
-          "coding": [
-            {
-              "code": "6.1"
-            }
-          ],
-          "text": "Birth details"
-        },
-        "header": "Birth details - To be completed by health professional",
-        "group": [
+        "header": "Demographics",
+        "question": [
           {
-            "question": [
+            "text": "Name of child",
+            "answerString": "Cathy Jones"
+          },
+          {
+            "text": "Sex",
+            "choice": [
               {
-                "text": "Name of child",
-                "answerString": "Cathy Jones"
-              },
+                "code": "f"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "header": "Neonatal Information",
+        "question": [
+          {
+            "text": "Birth weight (kg)",
+            "answerDecimal": 3.25
+          },
+          {
+            "text": "Birth length (cm)",
+            "answerDecimal": 44.3
+          },
+          {
+            "text": "Vitamin K given",
+            "choice": [
               {
-                "text": "Sex",
-                "choice": [
+                "code": "INJECTION"
+              }
+            ],
+            "group": [
+              {
+                "header": "Vitamin K details",
+                "extension": [
                   {
-                    "code": "f"
+                    "url": "http://example.org/Profile/questionnaire#visibilityCondition",
+                    "valueString": "HAS_VALUE(../choice/code) AND NEQ(../choice/code,'NO')"
+                  }
+                ],
+                "question": [
+                  {
+                    "text": "1st dose",
+                    "answerDate": "1972-11-30"
+                  },
+                  {
+                    "text": "2nd dose",
+                    "answerDate": "1972-12-11"
                   }
                 ]
               }
             ]
           },
           {
-            "header": "Neonatal Information",
-            "question": [
+            "text": "Hep B given y / n",
+            "answerBoolean": true,
+            "group": [
               {
-                "text": "Birth weight (kg)",
-                "answerDecimal": 3.25
-              },
-              {
-                "text": "Birth length (cm)",
-                "answerDecimal": 44.3
-              },
-              {
-                "text": "Vitamin K given",
-                "choice": [
+                "header": "HepB Details",
+                "question": [
                   {
-                    "code": "INJECTION"
-                  }
-                ],
-                "group": [
-                  {
-                    "extension": [
-                      {
-                        "url": "http://example.org/Profile/questionnaire#visibilityCondition",
-                        "valueString": "HAS_VALUE(../choice/code) AND NEQ(../choice/code,'NO')"
-                      }
-                    ],
-                    "question": [
-                      {
-                        "text": "1st dose",
-                        "answerDate": "1972-11-30"
-                      },
-                      {
-                        "text": "2nd dose",
-                        "answerDate": "1972-12-11"
-                      }
-                    ]
+                    "text": "Date given",
+                    "answerDate": "1972-12-04"
                   }
                 ]
-              },
-              {
-                "text": "Hep B given y / n",
-                "answerBoolean": true,
-                "group": [
-                  {
-                    "question": [
-                      {
-                        "text": "Date given",
-                        "answerDate": "1972-12-04"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "text": "Abnormalities noted at birth",
-                "answerString": "Already able to speak Chinese"
               }
             ]
+          },
+          {
+            "text": "Abnormalities noted at birth",
+            "answerString": "Already able to speak Chinese"
           }
         ]
       }

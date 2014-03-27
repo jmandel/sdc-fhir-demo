@@ -1,4 +1,9 @@
-<div class="q">
-  Q. {{question.text}}
+<div class="q" ng-controller="QuestionController">
+  <form role="form">
+    <div class="form-group">
+      <label>{{question.text}}</label>
+      <input type="text" class="form-control" ng-model="question.responses[0].text"/>
+    </div>
+  </form>
   <group ng-repeat="group in question.group" />
 </div>

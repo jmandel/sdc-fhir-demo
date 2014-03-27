@@ -1,5 +1,5 @@
 <div class="g">
-  Group {{group.name}}
+  <h4>{{group.header || group.text || group.name.text }}</h4>
   <question ng-repeat="question in group.question"/>
   <group ng-repeat="group in group.group"/>
 </div>

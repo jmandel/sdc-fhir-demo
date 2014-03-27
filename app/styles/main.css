@@ -1,5 +1,5 @@
-.q {background: red;}
-.g {padding-left: 2em; background: yellow; border: 10px solid white;}
+.q {}
+.g {padding-left: 2em;  border: 1px solid lightgrey; border-radius:10px; padding-right: 2em; margin-bottom: 1em;}
 
 /* Space out content a bit */
 body {
