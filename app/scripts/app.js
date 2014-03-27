@@ -19,7 +19,7 @@ angular.module('sdcApp', [
 
 angular.module('sdcApp').service('Questionnaire', function($http){
   this.get = function(id, success, error){
-    var ret = $http.get('/fixtures/'+id+'.json')
+    var ret = $http.get('fixtures/'+id+'.json')
     success && ret.success(success);
     error && ret.error(error);
     return ret;
