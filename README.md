@@ -1,6 +1,9 @@
 ## SDC --> FHIR Questionnaire prototype
 
-This is a rough take on the following process:
+#### Demo online: [birth details questionnaire](http://joshuamandel.com/sdc-fhir-demo/app/#/view/example) | [event reporting example](http://joshuamandel.com/sdc-fhir-demo/app/#/view/converted)
+
+
+This is a *very rough take* on the following process:
 
 1. Ahead of time, transition SDC XML definitions into [FHIR
    Questionnaire](http://hl7.org/implement/standards/fhir/questionnaire.html)
@@ -8,6 +11,7 @@ instances.
 
 
 2. Render FHIR questionnaires as web forms with client-side JavaScript
+
 
 ---
 
