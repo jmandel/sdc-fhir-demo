@@ -29,17 +29,14 @@
     "expansion": {
       "timestamp": "2014-04-23T11:00:00",
       "contains": [{
-        "code": "left_heel",
-        "display": "Left Heel"
-      }, {
-        "code": "right_heel",
-        "display": "Right Heel"
+        "code": "im",
+        "display": "Intramuscular administration"
       }, {
         "code": "oral",
-        "display": "Orally"
+        "display": "Oral administration"
       },{
         "code": "not_given",
-        "display": "Not given"
+        "display": "None"
       }]
     }
   }],
