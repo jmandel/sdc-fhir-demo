@@ -5,7 +5,7 @@
   },
   "contained": [{
     "resourceType": "ValueSet",
-    "_id": "sex-values",
+    "id": "sex-values",
     "name": "SexFakeValueSet",
     "status": "draft",
     "expansion": {

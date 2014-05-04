@@ -67,13 +67,19 @@ angular.module('sdcApp')
 
   $scope.options = [];
 
-  var answerType = oneExt("http://sdc/answerFormat", "string", "string", q);
+  var answerType = oneExt("http://hl7.org/fhir/answer-format", "string", "string", q);
   $scope.inputType = htmlInputTypeFor[answerType];
-
   $scope.multiline = oneExt("http://tcm7.com.au/fhir#multiline", "boolean", false, q);
 
+  $scope.multiple = oneExt("http://sdc/multipleCardinality", "boolean", false, q);
 
-  $scope.multiple = oneExt("multipleCardinality", "boolean", true, q);
+  var single = true;
+  single = oneExt("http://hl7.org/fhir/questionnaire-extensions#answerFormat", "code", false, q);
+
+  if (single == "single-choice") {
+    $scope.multiple = false;
+  }
+
   $scope.question.responses = {text: []}
 
   var optionsVs = null;
