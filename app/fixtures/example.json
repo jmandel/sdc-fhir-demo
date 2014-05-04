@@ -84,16 +84,16 @@
             "text": "Birth weight (kg)",
             "answerDecimal": 3.25,
             "extension": [{
-              "url": "http://hl7.org/fhir/answer-format",
-              "valueString": "decimal"
+              "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat",
+              "valueCode": "decimal"
             }]
           },
           {
             "text": "Birth length (cm)",
             "answerDecimal": 44.3,
             "extension": [{
-              "url": "http://hl7.org/fhir/answer-format",
-              "valueString": "decimal"
+              "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat",
+              "valueCode": "decimal"
             }]
           },
           {
@@ -108,15 +108,15 @@
                   {
                     "text": "1st dose",
                     "extension": [{
-                      "url": "http://hl7.org/fhir/answer-format",
-                      "valueString": "date"
+                      "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat",
+                      "valueCode": "date"
                     }]
                   },
                   {
                     "text": "2nd dose",
                     "extension": [{
-                      "url": "http://hl7.org/fhir/answer-format",
-                      "valueString": "date"
+                      "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat",
+                      "valueCode": "date"
                     }]
                   }
                 ]

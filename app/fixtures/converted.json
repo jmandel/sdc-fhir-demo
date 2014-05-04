@@ -13,8 +13,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -26,8 +26,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "date"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "date"
               }
             ]
           }
@@ -43,8 +43,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "date"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "date"
               }
             ]
           }, 
@@ -59,8 +59,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -72,8 +72,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -85,8 +85,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -101,8 +101,8 @@
                 "valueBoolean": true
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }
@@ -118,8 +118,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -131,8 +131,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }
@@ -148,8 +148,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -161,8 +161,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "date"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "date"
               }
             ]
           }, 
@@ -174,8 +174,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -190,8 +190,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }
@@ -210,8 +210,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -223,8 +223,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -236,8 +236,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "date"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "date"
               }
             ]
           }, 
@@ -249,8 +249,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }, 
@@ -265,8 +265,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }
@@ -285,8 +285,8 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://hl7.org/fhir/answer-format", 
-                "valueString": "string"
+                "url": "http://hl7.org/fhir/questionnaire-extensions#answerFormat", 
+                "valueCode": "string"
               }
             ]
           }

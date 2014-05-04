@@ -59,6 +59,17 @@ function oneExt(name, type, fallback, fhirObj){
   return ret;
 }
 
+function extMatch(name, type, value, fhirObj){
+  if (fhirObj.extension){
+    var matches = fhirObj.extension.filter(function(x){
+      return x.url==name && x["value"+type[0].toUpperCase() + type.slice(1)] == value;
+    });
+    return matches.length > 0;
+  }
+  return false;
+}
+
+
 angular.module('sdcApp')
 .controller('QuestionController', function ($scope, Questionnaire, smart) {
 
@@ -67,16 +78,16 @@ angular.module('sdcApp')
 
   $scope.options = [];
 
-  var answerType = oneExt("http://hl7.org/fhir/answer-format", "string", "string", q);
+  var answerType = oneExt("http://hl7.org/fhir/questionnaire-extensions#answerFormat", "code", "string", q);
   $scope.inputType = htmlInputTypeFor[answerType];
   $scope.multiline = oneExt("http://tcm7.com.au/fhir#multiline", "boolean", false, q);
 
   $scope.multiple = oneExt("http://sdc/multipleCardinality", "boolean", false, q);
 
   var single = true;
-  single = oneExt("http://hl7.org/fhir/questionnaire-extensions#answerFormat", "code", false, q);
+  single = extMatch("http://hl7.org/fhir/questionnaire-extensions#answerFormat", "code", "single-choice", q);
 
-  if (single == "single-choice") {
+  if (single) {
     $scope.multiple = false;
   }
 

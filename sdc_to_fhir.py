@@ -96,8 +96,8 @@ def makeQuestion(question):
         'valueBoolean': question.multiple
     })
     template['extension'].append({
-        'url': 'http://hl7.org/fhir/answer-format',
-        'valueString': question.datatype
+        'url': 'http://hl7.org/fhir/questionnaire-extensions#answerFormat',
+        'valueCode': question.datatype
     })
     if (question.choices):
         template['options'] = {'reference': '#'+makeValueSet(question.choices)}
