@@ -51,7 +51,7 @@ var htmlInputTypeFor = {
 function oneExt(name, type, fallback, fhirObj){
   var ret = fallback;
   if (fhirObj.extension){
-    var matches = fhirObj.extension.filter(function(x){return x.url=="http://sdc/"+name});
+    var matches = fhirObj.extension.filter(function(x){return x.url==name});
       if (matches.length === 1) {
         ret = matches[0]["value"+type[0].toUpperCase() + type.slice(1)];
       }
@@ -65,16 +65,35 @@ angular.module('sdcApp')
   var questionnaire = $scope.questionnaire;
   var q = $scope.question;
 
-  $scope.options = null;
+  $scope.options = [];
 
-  var answerType = oneExt("answerType", "string", "string", q);
+  var answerType = oneExt("http://sdc/answerFormat", "string", "string", q);
   $scope.inputType = htmlInputTypeFor[answerType];
+
+  $scope.multiline = oneExt("http://tcm7.com.au/fhir#multiline", "boolean", false, q);
+
 
   $scope.multiple = oneExt("multipleCardinality", "boolean", true, q);
   $scope.question.responses = {text: []}
 
+  var optionsVs = null;
+
   if (q.options && q.options.reference){
-    $scope.options = smart.cachedLink(questionnaire, q.options);
+    try {
+      optionsVs = smart.cachedLink(questionnaire, q.options);
+    } catch (e){
+      console.log("couldn't find valueset " + q.options.reference);
+    }
+    console.log("Options from", q.options.reference, $scope.options);
+  }
+
+  if (optionsVs !== null){
+    optionsVs.expansion && optionsVs.expansion.contains && optionsVs.expansion.contains.forEach(function(o){
+      $scope.options.push(o); 
+    });
+    optionsVs.define && optionsVs.define.concept && optionsVs.define.concept.forEach(function(o){
+      $scope.options.push(o); 
+    });
   }
 
 });

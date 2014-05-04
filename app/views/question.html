@@ -13,23 +13,27 @@
 
       <select multiple class="form-control" 
         ng-model="question.responses.choice"
-        ng-if="options && multiple">
-        <option ng-repeat="o in options.expansion.contains" ng-value="o.code">
+        ng-if="options.length>0 && multiple">
+        <option ng-repeat="o in options" ng-value="o.code">
         {{o.display}}
         </option>
       </select>
 
       <select class="form-control"
         ng-model="question.responses.choice"
-        ng-if="options && !multiple" >
-        <option ng-repeat="o in options.expansion.contains" ng-value="o.code">
+        ng-if="options.length>0 && !multiple" >
+        <option ng-repeat="o in options" ng-value="o.code">
         {{o.display}}
         </option>
       </select>
 
       <input type="{{inputType}}" class="form-control"
       ng-model="question.responses.text[0]"
-      ng-if="!options" />
+      ng-if="options.length==0 && !multiline" />
+      
+      <textarea class="form-control"
+      ng-model="question.responses.text[0]"
+      ng-if="options.length==0 && multiline" />
 
     </div>
   </form>

@@ -78,7 +78,7 @@ def makeValueSet(codes):
     valueSetNumber += 1
     vsname = 'vs-'+str(valueSetNumber)
     template = copy.deepcopy(vs)
-    template['_id'] = vsname 
+    template['id'] = vsname 
     template['name'] = vsname
     for c in codes:
         template['expansion']['contains'].append({

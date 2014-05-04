@@ -1,13 +1,13 @@
-<div class="header">
+<div class="row header">
   <h4 class="text-muted pull-left">{{questionnaire.group.header}}</h4>
   <h4 class="pull-right">(FHIR+SDC demonstration)</h4>
 </div>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-8">
     <group top/>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
     <pre id="preview">{{allAnswers() | json}}</pre>
   </div>
 </div>
