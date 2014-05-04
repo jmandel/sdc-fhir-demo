@@ -2,7 +2,14 @@
   <form role="form">
     <div class="form-group">
 
-      <label>{{question.text}}</label>
+      <label>
+        {{
+          question.text || 
+          question.name.text || 
+          question.name.coding[0].display || 
+          question.name.coding[0].code ||
+          '(Nameless)'
+         }}</label>
 
       <select multiple class="form-control" 
         ng-model="question.responses.choice"

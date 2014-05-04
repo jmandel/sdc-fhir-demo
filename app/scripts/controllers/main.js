@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('sdcApp')
-.controller('MainCtrl', function ($scope, $routeParams, Questionnaire) {
+.controller('MainCtrl', function ($scope, $routeParams, Questionnaire, smart) {
   console.log($routeParams);
-  Questionnaire.get($routeParams.questionnaire, function(data){
+  Questionnaire.get($routeParams.q, function(data){
     $scope.questionnaire = data;
     $scope.group = data.group;
+    console.log("Q", $scope.questionnaire);
   });
 
   $scope.allAnswers = function(){
@@ -59,7 +60,7 @@ function oneExt(name, type, fallback, fhirObj){
 }
 
 angular.module('sdcApp')
-.controller('QuestionController', function ($scope, Questionnaire) {
+.controller('QuestionController', function ($scope, Questionnaire, smart) {
 
   var questionnaire = $scope.questionnaire;
   var q = $scope.question;
@@ -73,9 +74,7 @@ angular.module('sdcApp')
   $scope.question.responses = {text: []}
 
   if (q.options && q.options.reference){
-    $scope.options = FhirClient({
-      serviceUrl:"https://test"
-    }).followSync(questionnaire, q.options);
+    $scope.options = smart.cachedLink(questionnaire, q.options);
   }
 
 });

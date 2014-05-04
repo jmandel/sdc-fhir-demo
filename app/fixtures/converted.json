@@ -13,7 +13,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -26,7 +26,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "date"
               }
             ]
@@ -43,7 +43,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "date"
               }
             ]
@@ -59,7 +59,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -72,7 +72,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -85,7 +85,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -101,7 +101,7 @@
                 "valueBoolean": true
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -118,7 +118,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -131,7 +131,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -148,7 +148,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -161,7 +161,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "date"
               }
             ]
@@ -174,7 +174,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -190,7 +190,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -210,7 +210,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -223,7 +223,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -236,7 +236,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "date"
               }
             ]
@@ -249,7 +249,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -265,7 +265,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]
@@ -285,7 +285,7 @@
                 "valueBoolean": false
               }, 
               {
-                "url": "http://sdc/answerType", 
+                "url": "http://hl7.org/fhir/answer-format", 
                 "valueString": "string"
               }
             ]

@@ -84,7 +84,7 @@
             "text": "Birth weight (kg)",
             "answerDecimal": 3.25,
             "extension": [{
-              "url": "http://sdc/answerType",
+              "url": "http://hl7.org/fhir/answer-format",
               "valueString": "decimal"
             }]
           },
@@ -92,7 +92,7 @@
             "text": "Birth length (cm)",
             "answerDecimal": 44.3,
             "extension": [{
-              "url": "http://sdc/answerType",
+              "url": "http://hl7.org/fhir/answer-format",
               "valueString": "decimal"
             }]
           },
@@ -108,14 +108,14 @@
                   {
                     "text": "1st dose",
                     "extension": [{
-                      "url": "http://sdc/answerType",
+                      "url": "http://hl7.org/fhir/answer-format",
                       "valueString": "date"
                     }]
                   },
                   {
                     "text": "2nd dose",
                     "extension": [{
-                      "url": "http://sdc/answerType",
+                      "url": "http://hl7.org/fhir/answer-format",
                       "valueString": "date"
                     }]
                   }

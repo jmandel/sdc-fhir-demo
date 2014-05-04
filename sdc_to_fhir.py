@@ -96,7 +96,7 @@ def makeQuestion(question):
         'valueBoolean': question.multiple
     })
     template['extension'].append({
-        'url': 'http://sdc/answerType',
+        'url': 'http://hl7.org/fhir/answer-format',
         'valueString': question.datatype
     })
     if (question.choices):
